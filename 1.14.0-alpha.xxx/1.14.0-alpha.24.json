@@ -297,7 +297,7 @@
         "server": "alidns-quic"
       },
       {
-        "domain_suffix": "bkl.372164885.xyz",
+        "domain_suffix": "",
         "server": "doh-ech"
       },
       {
