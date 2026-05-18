@@ -12,11 +12,16 @@
         "server": "dns.google"
       },
       {
-        "type": "udp",
+        "type": "udp",    
         "tag": "local",
         "server": "114.114.114.114",
         "server_port": 53
       },
+    // {
+    //  "type": "quic",
+    //  "tag": "local",
+    //  "server": "223.5.5.5"          
+    //  },
       {
         "type": "fakeip",
         "tag": "fakeip",
