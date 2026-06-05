@@ -24,6 +24,13 @@
         "type": "fakeip",
         "tag": "fakeip",
         "inet4_range": "198.18.0.0/15"
+      },
+      {
+        "type": "https",
+        "tag": "ggdns_doh",
+        "detour": "PROXY",
+        "domain_resolver": "alidns_quic",
+        "server": "dns.google"
       }
     ],
     "rules": [
@@ -50,7 +57,15 @@
         "server": "alidns_doh"
       },
       {
-        "rule_set": "cn",
+        "rule_set": [
+          "cn",
+          "private",
+          "microsoft-cn",
+          "apple-cn",
+          "google-cn",
+          "games-cn",
+          "networktest"
+        ],
         "server": "alidns_doh"
       },
       {
@@ -148,7 +163,7 @@
         "server": "fakeip"
       }
     ],
-    "final": "alidns_doh",
+    "final": "ggdns_doh",
     "reverse_mapping": true,
     "strategy": "ipv4_only",
     "cache_capacity": 16384
